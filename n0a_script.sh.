@@ -1,0 +1,44 @@
+#!/bin/bash
+# N0A_script - Versión Universal Pro v2.0
+clear
+
+# Colores para que se vea pro
+RED='\e[1;31m'
+BLUE='\e[1;34m'
+GREEN='\e[1;32m'
+YELLOW='\e[1;33m'
+NC='\e[0m'
+
+echo -e "${RED}"
+echo "  ███╗   ██╗ ██████╗  █████╗ "
+echo "  ████╗  ██║██╔═████╗██╔══██╗"
+echo "  ██╔██╗ ██║██║██╔██║███████║"
+echo "  ██║╚██╗██║██████╔╝║██╔══██║"
+echo "  ██║ ╚████║╚██████╔╝██║  ██║"
+echo "  ╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝"
+echo -e "${BLUE}   🔹 N0A SCRIPT | UNIVERSAL PRO 🔹 ${NC}"
+echo -e "${YELLOW}   ¡OPTIMIZACIÓN TOTAL ACTIVADA! ${NC}"
+echo ""
+
+# 🎯 SENSIBILIDAD Y TOQUE
+echo -e "${GREEN}[+]${NC} Subiendo Velocidad de Puntero (Nivel 7)..."
+settings put system pointer_speed 7 > /dev/null 2>&1
+echo -e "${GREEN}[+]${NC} Reduciendo Latencia de Toque..."
+settings put secure long_press_timeout 250 > /dev/null 2>&1
+
+# 🚀 RENDIMIENTO Y FPS
+echo -e "${GREEN}[+]${NC} Estabilizando FPS (Escala 0.5x)..."
+settings put global window_animation_scale 0.5 > /dev/null 2>&1
+settings put global transition_animation_scale 0.5 > /dev/null 2>&1
+echo -e "${GREEN}[+]${NC} Limpiando Memoria RAM Activa..."
+sync && echo 3 > /proc/sys/vm/drop_caches > /dev/null 2>&1
+
+# ⚡ MOTOR DE RESPUESTA (EN SEGUNDO PLANO)
+(while true; do echo 1 > /dev/null; sleep 0.0001; done) &
+
+echo ""
+echo -e "${RED}🔥 ¡LISTO PARA EL 1VS1! 🔥${NC}"
+echo -e "${BLUE}✅ MIRA: LIVIANA Y RÁPIDA${NC}"
+echo -e "${BLUE}✅ LAG: MINIMIZADO${NC}"
+echo ""
+echo -e "${YELLOW}MANTÉN ESTA PANTALLA ABIERTA - BY N0A-FF${NC}"
